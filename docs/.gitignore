@@ -1,0 +1,14 @@
+.env
+.next
+
+node_modules/
+dist/
+
+# For Yarn using Zero-install
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
