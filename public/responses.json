@@ -1,0 +1,39 @@
+{
+  "schemas": {
+
+    "defaultResponse": {
+      "error": {
+        "value": {
+          "_type": [
+            "Boolean"
+          ],
+          "_description":"Specifies the error status."
+        },
+        "message": {
+          "_type": [
+            "String"
+          ],
+          "_description":"Specifies the reason of the error."
+        },
+        "timestamp": {
+          "_type": [
+            "Integer",
+            "undefined"
+          ],
+          "_description":"Specifies the UNIX timestamp of the event."
+        },
+        "_type": [
+          "Object"
+        ],
+        "_description":"Contains an object with the error status, the reason and the moment of the event register."
+      },
+      "value": {
+        "_type": [
+          "Object",
+          "undefined"
+        ],
+        "_description":"Contains the endpoint business object."
+      }
+    }
+  }
+}

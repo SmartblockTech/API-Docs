@@ -1,42 +1,47 @@
 {
-  "name": "smartblock-api-docs",
-  "version": "0.0.1",
-  "description": "Static site generator with a Single Page Application (NextJS!)",
+  "name": "smartblock-docs",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "next",
-    "publish": "yarn slides:pre-cleanup && yarn slides:prod-build && yarn slides:export && yarn slides:publish && yarn slides:cleanup",
-    "slides:prod-build": "export SPA_EXP_BUILD=true && next build",
-    "slides:export": "next export -o dist && cp ./_config.yml dist/_config.yml",
-    "slides:publish": "subpath-as-branch -p dist -b gh-pages",
-    "slides:cleanup": "rm -rf dist",
-    "slides:pre-cleanup": "rm -rf .next dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SmartblockTech/API-Docs.git"
-  },
-  "author": "Smartblock Technologies SpA",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SmartblockTech/API-Docs/issues"
-  },
-  "homepage": "https://github.com/SmartblockTech/API-Docs#readme",
-  "devDependencies": {
-    "@zeit/next-sass": "~1.0.1",
-    "compression-webpack-plugin": "^3.1.0",
-    "file-loader": "~4.2.0",
-    "next": "^9.5.5",
-    "node-sass": "4.14.1",
-    "react": "~17.0.2",
-    "react-dom": "~17.0.2",
-    "subpath-as-branch": "~1.0.0",
-    "url-loader": "~4.1.1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export -o dist",
+    "pub:cleanup:pre": "ts-node scripts/build/cleanup:pre.ts",
+    "pub:build": "SPA_EXP_BUILD=true next build",
+    "pub:export": "ts-node scripts/next/export.ts",
+    "pub:publish": "subpath-as-branch -p dist -b published",
+    "pub:cleanup": "ts-node scripts/build/cleanup.ts",
+    "pub:do": "GH_CUSTOM_DOMAIN=docs.smartblock.cl ts-node scripts/publish/do.ts",
+    "publish": "yarn pub:do"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
-    "bootstrap": "5.0.2",
-    "react-bootstrap": "2.0.0-beta.4"
+    "bootstrap": "5.1.0",
+    "next": "11.1.0",
+    "nprogress": "^0.2.0",
+    "react": "17.0.2",
+    "react-bootstrap": "2.0.0-beta.6",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/concurrently": "^6.2.1",
+    "@types/fs-extra": "^9.0.12",
+    "@types/js-yaml": "^4.0.3",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "17.0.19",
+    "@types/rimraf": "^3.0.2",
+    "concurrently": "^6.2.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "fs-extra": "^10.0.0",
+    "js-yaml": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "subpath-as-branch": "^1.0.0",
+    "ts-node": "^10.2.1",
+    "typescript": "4.3.5"
   }
 }

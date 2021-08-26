@@ -1,0 +1,51 @@
+// Local resources
+@import ~bootstrap/scss/bootstrap
+@import ~bootstrap/scss/variables
+@import ~nprogress/nprogress.css
+
+// Fonts
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap)
+
+*
+  &:disabled,
+  &.disabled, 
+  &[disabled]
+    cursor: not-allowed !important
+    pointer-events: all !important
+
+h1
+  font-weight: bold
+
+h2, h3, h4, h5, h6
+  margin-top: 1.5rem
+  margin-bottom: 2rem
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: wavy
+
+code, .font-monospace
+  font-family: 'Fira Code', 'Source Code Pro', monospace !important
+
+.header-link
+  transition: all .2s
+  &.copied
+    &::after
+      content: 'Copied'
+      position: relative
+      margin-left: .5rem
+      font-size: .8rem
+      font-weight: lighter
+      color: black
+      cursor: auto
+      pointer-events: none
+  &:hover
+    color: map-get($theme-colors, 'primary')
+    cursor: pointer
+    &:not(.copied)
+      &::after
+        content: '#'
+        position: relative
+        font-weight: normal
+        margin-left: .5rem
