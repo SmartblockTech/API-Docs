@@ -1,5 +1,7 @@
 # Smartblock Docs
 
+[![CircleCI](https://circleci.com/gh/SmartblockTech/Docs/tree/main.svg?style=svg)](https://circleci.com/gh/SmartblockTech/Docs/tree/main)
+
 Official Smartblock platform documentation
 
 ## What is included (TO-DO)
