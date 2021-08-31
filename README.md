@@ -1,6 +1,6 @@
 # Smartblock Docs
 
-[![CircleCI](https://circleci.com/gh/SmartblockTech/Docs/tree/main.svg?style=svg)](https://circleci.com/gh/SmartblockTech/Docs/tree/main)
+[![CircleCI](https://circleci.com/gh/SmartblockTech/Docs/tree/main.svg?style=svg)](https://circleci.com/gh/SmartblockTech/Docs/tree/main) ![Known Vulnerabilities](https://snyk.io/test/github/SmartblockTech/Docs/badge.svg)
 
 Official Smartblock platform documentation
 
